@@ -21,11 +21,12 @@ public class DetallePedido extends BaseEntidad{
     private double subtotal;
 
     @ManyToOne
-    @JoinColumn(name="Pedido_ID")
+    @JoinColumn(name="pedido")
     private Pedido pedido;
 
     @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "producto_id")
+    @JoinColumn(name = "producto")
     private Producto producto;
+
 
 }

@@ -84,18 +84,18 @@ public class TpPersistApplication {
 			cliente1.addDomicilio(domicilio1);
 			cliente1.addPedido(pedido1);
 			pedido1.setFactura(factura1);
-			//terminar de agregar
-
+			pedido1.addDetallePedido(detallePedido1);
+			detallePedido1.setPedido(pedido1);
+			detallePedido1.setProducto(producto1);
 
 
 			rubroRepositorio.save(rubro1);
 			productoRepositorio.save(producto1);
 			clienteRepositorio.save(cliente1);
+			facturaRepositorio.save(factura1);
 			detallePedidoRepositorio.save(detallePedido1);
 			domicilioRepositorio.save(domicilio1);
-			facturaRepositorio.save(factura1);
 			pedidoRepositorio.save(pedido1);
-			// revisar
 
 		};
 
